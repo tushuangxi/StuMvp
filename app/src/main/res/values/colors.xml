@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- app主色调-->
+    <color name="main_color">#00aaff</color>
+    <color name="role_yellow_gray">#33CC99</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_while">#FFFFFF</color>
+    <color name="backgound_fcfcfc">#fffcfcfc</color>
+    <color name="blue_text_007dff">#ff007dff</color>
+
+    <!-- 背景色 -->
+    <color name="background">#F5F6F8</color>
+    <!--文本红色-->
+    <color name="text_red">#FF4C4C</color>
+
+    <!-- 文本黑色 -->
+    <color name="text_black">#424954</color>
+
+    <!--分割线颜色-->
+    <color name="line_color">#d8d8d8</color>
+
+    <color name="bluer">#389DF2</color>
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+</resources>

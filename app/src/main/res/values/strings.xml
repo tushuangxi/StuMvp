@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">StuMvp</string>
+
+    <string name="loading_default_desc">正在加载...</string>
+</resources>
