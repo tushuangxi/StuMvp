@@ -26,4 +26,6 @@
     <color name="bluer">#389DF2</color>
     <!-- 白色 -->
     <color name="white">#FFFFFF</color>
+
+    <color name="translucent">#5a000000</color>
 </resources>

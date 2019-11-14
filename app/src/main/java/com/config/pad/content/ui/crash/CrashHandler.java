@@ -69,11 +69,11 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         //保存日志文件到本地
         saveCrashInfo2File(ex);
 
-        Intent intent = new Intent(mContext, CrashInfoActivity.class);
-        intent.putExtra(EXTRA_CONTENT, ex.toString());
-        intent.putExtra(EXTRA_CONTENT, crashInfo.toString());
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        mContext.startActivity(intent);
+//        Intent intent = new Intent(mContext, CrashInfoActivity.class);
+//        intent.putExtra(EXTRA_CONTENT, ex.toString());
+//        intent.putExtra(EXTRA_CONTENT, crashInfo.toString());
+//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        mContext.startActivity(intent);
 
         //这里可以通过网络上传异常信息到服务器，便于开发人员分析日志从而解决bug
         uploadExceptionToServer();
