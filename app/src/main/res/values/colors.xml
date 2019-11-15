@@ -28,4 +28,10 @@
     <color name="white">#FFFFFF</color>
 
     <color name="translucent">#5a000000</color>
+
+    <color name="blackbb">#bbbbbb</color>
+
+    <color name="guide_anim">#3e80fc</color>
+    <color name="remind_color">#f54949</color>
+    <color name="text_color">#ffffff</color>
 </resources>

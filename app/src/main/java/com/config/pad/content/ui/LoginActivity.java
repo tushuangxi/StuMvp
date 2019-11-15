@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.config.pad.content.R;
+import com.config.pad.content.libding.rerxmvp.base.BaseActivity;
 import com.dd.CircularProgressButton;
 import com.github.florent37.expectanim.ExpectAnim;
 import com.github.florent37.expectanim.listener.AnimationEndListener;
@@ -33,8 +34,7 @@ import static com.github.florent37.expectanim.core.Expectations.outOfScreen;
 import static com.github.florent37.expectanim.core.Expectations.visible;
 
 
-public class LoginActivity extends AppCompatActivity {
-
+public class LoginActivity extends BaseActivity {
 
     @BindView(R.id.login_activity_left_layout)
     LinearLayout loginActivityLeftLayout;
@@ -60,15 +60,18 @@ public class LoginActivity extends AppCompatActivity {
     ImageView loginFormAlpha;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
-            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
-        }
-        setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
+    protected int getLayoutId() {
+        return R.layout.activity_login;
+    }
 
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected View getRootView() {
+        return null;
     }
 
     private void atemptLogin(final String username, final String password){
@@ -208,7 +211,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void checkUsernameAndPassword() {
-        
+
         loginAnimPlay(email.getText().toString(),password.getText().toString());
 
     }

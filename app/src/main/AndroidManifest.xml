@@ -18,17 +18,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".libding.rerxmvp.view.activity.GetMvpRspActivity" />
+        <!--<activity android:name=".libding.rerxmvp.view.activity.GetMvpRspActivity" />-->
         <!--SplashActivity-->
-        <activity android:name=".ui.LoginActivity"  >
+        <activity android:name=".ui.MainSmartActivity"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".libding.rerxmvp.view.activity.PostListRspActivity" />
+        <!--<activity android:name=".libding.rerxmvp.view.activity.PostListRspActivity" />-->
         <activity android:name=".libding.rerxmvp.view.GetListRspActivity" />
+        <activity android:name=".ui.LoginActivity" />
         <activity
             android:name=".ui.crash.CrashInfoActivity"
             android:screenOrientation="portrait" />
