@@ -9,7 +9,14 @@ import com.config.pad.content.libding.rerxmvp.view.activity.PostListRspActivity;
 import com.config.pad.content.libding.widget.recyclerlist.TestRecyclerViewBaseActivity;
 import com.config.pad.content.library.alertview.AlertView;
 import com.config.pad.content.library.alertview.DialogLoading;
+import com.config.pad.content.library.error.NetError;
+import com.google.gson.Gson;
+import com.google.gson.JsonParseException;
+import com.google.gson.JsonSyntaxException;
 
+import org.json.JSONException;
+
+import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Flowable;
@@ -51,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, LoginTemplateActivity.class));
 
     }
+
+
+
     public void AlertView(View view){
         loading.show();
 
@@ -60,9 +70,62 @@ public class MainActivity extends AppCompatActivity {
                     if(loading.isShowing()){
                         loading.dismiss();
                     }
-                    AlertView.showTip(MainActivity.this,"请求成功！");
+//                    AlertView.showTip(MainActivity.this,"请求成功！");
+
+                    onError(new JsonParseException(""));
                 }, Throwable::printStackTrace);
+    }
 
 
+    public void onError(Throwable e) {
+        NetError error = null;
+        if (e != null) {
+            if (!(e instanceof NetError)) {
+                if (e instanceof UnknownHostException) {
+                    error = new NetError(e, NetError.NoConnectError);
+                } else if (e instanceof JSONException
+                        || e instanceof JsonParseException
+                        || e instanceof JsonSyntaxException) {
+                    error = new NetError(e, NetError.ParseError);
+                } else {
+                    error = new NetError(e, NetError.OtherError);
+                }
+            } else {
+                error = (NetError) e;
+            }
+            showError(error);
+        }
+    }
+
+    public void showError(NetError error){
+        if(loading.isShowing()){
+            loading.dismiss();
+        }
+        if (error != null) {
+            switch (error.getType()) {
+                case NetError.ParseError:
+                    AlertView.showTip(MainActivity.this, "数据解析异常！");
+                    break;
+
+                case NetError.NoConnectError:
+                    AlertView.showTip(MainActivity.this, "网络无连接！");
+                    break;
+
+                case NetError.NoDataError:
+                    AlertView.showTip(MainActivity.this, "添加失败！请重试！");
+                    break;
+
+                case NetError.OtherError:
+                    AlertView.showTip(MainActivity.this, "服务器繁忙！");
+                    break;
+            }
+        }
+    }
+
+    public void showSuccess(){
+        if(loading.isShowing()){
+            loading.dismiss();
+        }
+        AlertView.showTip(MainActivity.this, "登录成功！");
     }
 }
