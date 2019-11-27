@@ -34,4 +34,8 @@
     <color name="guide_anim">#3e80fc</color>
     <color name="remind_color">#f54949</color>
     <color name="text_color">#ffffff</color>
+
+    <color name="UI_main">#5856D6</color>
+    <color name="UI_text_gray">#A1A1A1</color>
+    <color name="UI_text_black">#353535</color>
 </resources>

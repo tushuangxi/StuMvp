@@ -3,14 +3,32 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical">
 
 
     <Button
         android:id="@+id/commit"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="测试"/>
+
+    <Button
+        android:id="@+id/RecyclerViewBaseList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="展示列表"
+        android:textAllCaps="false"
+        android:onClick="RecyclerViewBaseList"
+        />
+
+
+    <Button
+        android:id="@+id/LoginTemplateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UI模板"
+        android:textAllCaps="false"
+        android:onClick="LoginTemplateView"
+        />
 
 </LinearLayout>

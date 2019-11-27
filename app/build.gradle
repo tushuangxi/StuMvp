@@ -74,4 +74,13 @@ dependencies {
 
 //    ImmersionBar
     implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+
+    //recyclerlist
+    implementation 'com.android.support:design:27.0.0'
+    implementation 'com.android.support:recyclerview-v7:27.0.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.35'
+
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
 }
