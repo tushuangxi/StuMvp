@@ -21,6 +21,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
     //第三种方式(Android1.6版本及以后的版本中提供了)
+    public void SplashActivity(View view){
+        startActivity(new Intent(MainActivity.this, SplashActivity.class));
+
+    }
+    public void LoginActivity(View view){
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
+    }
+    public void MainSmartActivity(View view){
+        startActivity(new Intent(MainActivity.this, MainSmartActivity.class));
+
+    }
+
     public void RecyclerViewBaseList(View view){
         startActivity(new Intent(MainActivity.this, TestRecyclerViewBaseActivity.class));
 
