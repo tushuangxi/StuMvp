@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.config.pad.content.R;
 import com.config.pad.content.libding.rerxmvp.base.BaseActivity;
 import com.config.pad.content.libding.rerxmvp.view.activity.GetMvpRspActivity;
+import com.config.pad.content.libding.rerxmvp.view.activity.PostListRspActivity;
 import com.config.pad.content.libding.utils.SpfsUtils;
 import com.config.pad.content.libding.utils.XPermission;
 
@@ -72,9 +73,9 @@ public class SplashActivity extends BaseActivity {
         Flowable.timer(1200, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(aLong -> {
-//                    mBaseActivity.startActivity(new Intent(getActivity(), PostListRspActivity.class));
+                    mBaseActivity.startActivity(new Intent(getActivity(), PostListRspActivity.class));
 //                    mBaseActivity.startActivity(new Intent(getActivity(), GetMvpRspActivity.class));
-                    readyGo(GetMvpRspActivity.class);
+//                    readyGo(GetMvpRspActivity.class);
                     finish();
                 }, Throwable::printStackTrace);
     }

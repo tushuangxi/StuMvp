@@ -87,7 +87,7 @@ public class GetMvpRspActivity extends BaseActivity implements interfaceUtilsAll
 //        map.put("job","Android工程师");
 //        XLog.map(map);
 
-        XLog.json(json);
+//        XLog.json(json);
 //        XLog.xml(xml);
 
 //        JsonFormatDialogFragment jsonFormatDialogFragment = JsonFormatDialogFragment.newInstance(json.toString());
