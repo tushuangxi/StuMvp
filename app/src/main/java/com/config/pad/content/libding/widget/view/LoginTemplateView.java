@@ -15,6 +15,7 @@ import com.config.pad.content.R;
 import android.support.annotation.ColorInt;
 import android.support.annotation.DrawableRes;
 
+//https://github.com/youth5201314/UITemplateView
 public class LoginTemplateView extends FrameLayout {
     private Context context;
     private RelativeLayout loginTemplate;

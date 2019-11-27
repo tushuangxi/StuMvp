@@ -9,6 +9,7 @@ import com.config.pad.content.libding.widget.view.LoginTemplateView;
 
 
 //LoginTemplateView   UI 快速开发 模板
+
 public class LoginTemplateActivity extends AppCompatActivity {
     LoginTemplateView view;
     @Override
