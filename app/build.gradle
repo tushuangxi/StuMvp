@@ -50,8 +50,8 @@ dependencies {
     implementation 'joda-time:joda-time:2.3'
 
     //import io.reactivex.Flowable   使用RxJava的标识符来实现延迟效果
-    implementation "io.reactivex.rxjava2:rxjava:2.1.13"
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    compile "io.reactivex.rxjava2:rxjava:2.1.13"
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.2'
 
     //Json 数据格式化显示对话框
     compile 'com.anarchy.lib:library:0.5.0'

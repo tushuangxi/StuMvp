@@ -8,7 +8,9 @@ import com.config.pad.content.libding.entry.PostListRsp;
 
 import java.util.List;
 import java.util.Map;
+//import rx.Subscription;
 import rx.Subscription;
+
 
 public class interfaceUtilsAll {
     public interface TestJson{
@@ -52,8 +54,8 @@ public class interfaceUtilsAll {
     //---------------------------------------------------------------------------------------------------------------所有的Model interface
     public interface SubjectBookListModel {
 
-        Subscription requestGetListRspList(RequestCallback<GetListRsp> callback, Map<String, String> params);
-        Subscription requestPostListRspList(RequestCallback<PostListRsp> callback, Map<String, String> params);
+        rx.Subscription requestGetListRspList(RequestCallback<GetListRsp> callback, Map<String, String> params);
+        rx.Subscription requestPostListRspList(RequestCallback<PostListRsp> callback, Map<String, String> params);
         Subscription requestGetMvpRspList(RequestCallback<GetMvpRsp> callback, Map<String, String> params);
 
 
